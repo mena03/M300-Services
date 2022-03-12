@@ -15,9 +15,25 @@ Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.network "forwarded_port", guest: 80, host: 8080
   config.vm.provision "shell", inline: <<-SHELL
+    #pre-config
     apt-get update
-    apt-get upgrade
-    
+    apt-get -y upgrade
+    sudo apt-get -y install squid   #proxy
+    sudo apt-get -y install apache2 #webserver
+    sudo apt-get -y install wget    #um configs vom github zu installieren
+    #squid config
+    service squid.service start
+    service squid.service restart
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/squid.conf #config file herunterladen
+    mv /etc/squid3/squid.conf /etc/squid3/squid.conf.backup #falls etwas schiefgehen würde hat man immer ein standardconfig
+    mv squid.conf /etc/squid3/      #heruntergeladenes config file verschieben in das richtige verzeichnis
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/bad-sites.acl #blockiere sites file herunterladen
+    mv bad-sites.acl /etc/squid3/
+    service squid3 restart
+    #apache config
+    service apache2 start
+    service apache2 restart
+    #noch html website für jedes log file erstellen und herunterladen von git raw
   SHELL
 
   # Disable automatic box update checking. If you disable this, then
