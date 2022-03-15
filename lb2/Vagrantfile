@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
     wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/squid.conf #config file herunterladen
     mv /etc/squid3/squid.conf /etc/squid3/squid.conf.backup #falls etwas schiefgehen würde hat man immer ein standardconfig
     mv squid.conf /etc/squid3/      #heruntergeladenes config file verschieben in das richtige verzeichnis
-    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/bad-sites.acl #blockiere sites file herunterladen
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/blocklist #blockiere sites file herunterladen
     mv bad-sites.acl /etc/squid3/
     service squid3 restart
     #apache config
