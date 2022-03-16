@@ -116,5 +116,12 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 </table>
 <h2>Test</h2>
 <h3>Squid Proxy</h3>
-<h4>Blockierte Websites</h4>
+<h4>blockierte und erlaubte Websites</h4>
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/squidconf.png?token=GHSAT0AAAAAABSMD6CK77XCO6STVMJOLPAWYRR2U2Q">
+<p>Wie man im Bild erkennen kann, ist diese Regel nur für den localhost definiert, mann könnte dies jedoch erweitern auf ein Netzwerk natürlich. Im blocklist-File habe ich die Seite .google.com drin. Um nun zu testen, ob das die Konfiguration funktioniert empfehlen ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellt. Dies kann aber auch in den Betriebssystemeinstellungen gemacht werden. </p>
+<h5>Firefox</h5>
+1. Firefox öffnen
+2. "about:preferences" in die Suchleiste eingeben
+3. Einstellungen suchen -> Proxy eingeben -> Einstellungen
+4. Am Schluss sollte das so aussehen:
 <img src="">
