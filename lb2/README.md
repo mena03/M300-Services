@@ -15,7 +15,8 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
 <h4>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</h4>
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/vagrantfile.png?token=GHSAT0AAAAAABSMD6CLU3WLYBKZ5NHW3W3OYRR2PTQ"/>
+#<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/vagrantfile.png?token=GHSAT0AAAAAABSMD6CLU3WLYBKZ5NHW3W3OYRR2PTQ"/>
+![Vagrantfile](https://github.com/mena03/M300-Services/blob/main/lb2/images/vagrantfile.png)
 
 <h4>Erklärung des Codes</h4>
 <p>INFO: Alles hinter einem "#" ist ein Kommentar und wird somit nicht erklärt. 
