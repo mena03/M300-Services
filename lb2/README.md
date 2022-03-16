@@ -128,10 +128,11 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 5. "OK" klicken <br>
 6. "www.google.com" in der Suchleiste suchen <br>
 7. Folgendes sollte kommen:
-<img src=""><br>
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/googleblocked.png?token=GHSAT0AAAAAABSMD6CKS4OG76PWLNZG4SZMYRR3L5A"><br>
 8. Nun können Sie jede beliebige Website probieren und wenn es richtig konfiguriert ist, sollte alles funktionieren. <br>
 <h3>Apache Webserver</h3>
-1. 127.0.0.1:8080 in die Suchleiste:
-<img src=""> <br>
+1. 127.0.0.1:8080 in die Suchleiste: <br>
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/manipage.png?token=GHSAT0AAAAAABSMD6CK3RZ7W5R2WWQZVGIGYRR3MFA"> <br>
 2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll man wenn man nun auf "access.log" klickt sollte man die TCP_DENIED_REPLY für www.google.com:443 sehen:
-<img src=""> <br>
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/accesslog.png?token=GHSAT0AAAAAABSMD6CKPCTEPU5MIBTCJBL2YRR3MMA"> <br>
+3. 

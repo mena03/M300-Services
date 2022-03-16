@@ -47,7 +47,7 @@ Vagrant.configure("2") do |config|
     chmod 777 /var/www/html/logs/squid3/
     ln -s /var/log/squid3/access.log /var/www/html/logs/squid3/access
     chmod 777 /var/www/html/logs/squid3/access
-    ln -s /var/log/squid3/access.log /var/www/html/logs/squid3/cache
+    ln -s /var/log/squid3/cache.log /var/www/html/logs/squid3/cache
     chmod 777 /var/www/html/logs/squid3/cache
     service apache2 restart
   SHELL
