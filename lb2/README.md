@@ -120,8 +120,18 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/squidconf.png?token=GHSAT0AAAAAABSMD6CK77XCO6STVMJOLPAWYRR2U2Q">
 <p>Wie man im Bild erkennen kann, ist diese Regel nur für den localhost definiert, mann könnte dies jedoch erweitern auf ein Netzwerk natürlich. Im blocklist-File habe ich die Seite .google.com drin. Um nun zu testen, ob das die Konfiguration funktioniert empfehlen ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellt. Dies kann aber auch in den Betriebssystemeinstellungen gemacht werden. </p>
 <h5>Firefox</h5>
-1. Firefox öffnen
-2. "about:preferences" in die Suchleiste eingeben
-3. Einstellungen suchen -> Proxy eingeben -> Einstellungen
+1. Firefox öffnen <br>
+2. "about:preferences" in die Suchleiste eingeben <br>
+3. Einstellungen suchen -> Proxy eingeben -> Einstellungen <br>
 4. Am Schluss sollte das so aussehen:
-<img src="">
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/Proxysettings_Firefox.png?token=GHSAT0AAAAAABSMD6CKUCUYGXQEVAVRRJ7OYRR27CQ"><br>
+5. "OK" klicken <br>
+6. "www.google.com" in der Suchleiste suchen <br>
+7. Folgendes sollte kommen:
+<img src=""><br>
+8. Nun können Sie jede beliebige Website probieren und wenn es richtig konfiguriert ist, sollte alles funktionieren. <br>
+<h3>Apache Webserver</h3>
+1. 127.0.0.1:8080 in die Suchleiste:
+<img src=""> <br>
+2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll man wenn man nun auf "access.log" klickt sollte man die TCP_DENIED_REPLY für www.google.com:443 sehen:
+<img src=""> <br>
