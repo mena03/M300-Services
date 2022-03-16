@@ -50,7 +50,6 @@ Vagrant.configure("2") do |config|
     ln -s /var/log/squid3/access.log /var/www/html/logs/squid3/cache
     chmod 777 /var/www/html/logs/squid3/cache
     service apache2 restart
-    #noch html website für jedes log file erstellen und herunterladen von git raw
   SHELL
 
   # Disable automatic box update checking. If you disable this, then
