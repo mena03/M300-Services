@@ -4,6 +4,6 @@ Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squi
 
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
-<img src="/images/vagrantfile.png"/>
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/vagrantfile.png?token=GHSAT0AAAAAABSMVOYTEVXNGT6XU2FR5FAGYRRWBAQ"/>
 
 <h2>Test</h2>
