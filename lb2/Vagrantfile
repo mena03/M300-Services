@@ -31,9 +31,23 @@ Vagrant.configure("2") do |config|
     mv squid.conf /etc/squid3/      #heruntergeladenes config file verschieben in das richtige verzeichnis
     wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/blocklist #blockiere sites file herunterladen
     mv blocklist /etc/squid3/
+    chmod 777 /var/logs/squid3/
+    chmod 777 /var/logs/squid3/access.log
+    chmod 777 /var/logs/squid3/cache.log
     service squid3 restart
     #apache config
     service apache2 start
+    service apache2 restart
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/index.html
+    mv /var/www/html/index.html /var/html/index.html.backup
+    mv index.html /var/html/index.html
+    mkdir /var/www/html/logs/
+    mkdir /var/www/html/logs/squid3/
+    chmod 777 /var/www/html/logs/squid3/
+    ln -s /var/log/squid3/access.log /var/www/html/logs/squid3/access
+    chmod 777 /var/www/html/logs/squid3/access
+    ln -s /var/log/squid3/access.log /var/www/html/logs/squid3/cache
+    chmod 777 /var/www/html/logs/squid3/cache
     service apache2 restart
     #noch html website für jedes log file erstellen und herunterladen von git raw
   SHELL
