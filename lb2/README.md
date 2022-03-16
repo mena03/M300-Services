@@ -135,4 +135,5 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/manipage.png?token=GHSAT0AAAAAABSMD6CK3RZ7W5R2WWQZVGIGYRR3MFA"> <br>
 2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll man wenn man nun auf "access.log" klickt sollte man die TCP_DENIED_REPLY für www.google.com:443 sehen:
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/accesslog.png?token=GHSAT0AAAAAABSMD6CKPCTEPU5MIBTCJBL2YRR3MMA"> <br>
-3. 
+3. Bei cache.log sollte das in etwa so aussehen:
+<img src="">
