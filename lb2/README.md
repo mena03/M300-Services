@@ -3,6 +3,9 @@
 
 <a href="https://github.com/mena03/M300-Services">M300-Services GIT Repository</a><br>
 <a href="https://github.com/mena03/vagrant-webserver">vagrant-webserver GIT Repository (für wget)</a><br>
+<a href="http://127.0.0.1:8080">Webserver Main Page</a><br>
+<a href="http://127.0.0.1:8080/logs/squid3/access"></a>access.log im Webserver<br>
+<a href="http://127.0.0.1:8080/logs/squid3/cache"></a>cache.log im Webserver<br>
 
 <h2>Meine Aufgabe bei der LB2</h2>
 Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). <br>
@@ -115,11 +118,11 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
   </tr>
 </table>
 <h2>Test</h2>
-<h3>Squid Proxy</h3>
+<h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/squidconf.png?token=GHSAT0AAAAAABSMD6CK77XCO6STVMJOLPAWYRR2U2Q">
-<p>Wie man im Bild erkennen kann, ist diese Regel nur für den localhost definiert, mann könnte dies jedoch erweitern auf ein Netzwerk natürlich. Im blocklist-File habe ich die Seite .google.com drin. Um nun zu testen, ob das die Konfiguration funktioniert empfehlen ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellt. Dies kann aber auch in den Betriebssystemeinstellungen gemacht werden. </p>
-<h5>Firefox</h5>
+<p>Wie man im Bild erkennen kann, ist diese Regel nur für den localhost definiert, mann könnte dies jedoch erweitern auf ein Netzwerk natürlich. Im blocklist-File habe ich die Seite .google.com drin. Um nun zu testen, ob das die Konfiguration funktioniert empfehle und verwende ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellen kann und nicht für den ganzen Host.</p>
+
 1. Firefox öffnen <br>
 2. "about:preferences" in die Suchleiste eingeben <br>
 3. Einstellungen suchen -> Proxy eingeben -> Einstellungen <br>
@@ -130,10 +133,10 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 7. Folgendes sollte kommen:
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/googleblocked.png?token=GHSAT0AAAAAABSMD6CKS4OG76PWLNZG4SZMYRR3L5A"><br>
 8. Nun können Sie jede beliebige Website probieren und wenn es richtig konfiguriert ist, sollte alles funktionieren. <br>
-<h3>Apache Webserver</h3>
+<h3>Apache Webserver testen</h3>
 1. 127.0.0.1:8080 in die Suchleiste: <br>
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/manipage.png?token=GHSAT0AAAAAABSMD6CK3RZ7W5R2WWQZVGIGYRR3MFA"> <br>
-2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll man wenn man nun auf "access.log" klickt sollte man die TCP_DENIED_REPLY für www.google.com:443 sehen:
+2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll unter "access.log"  <b>TCP_DENIED_REPLY</b> für www.google.com:443 zu sehen sein:
 <img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/accesslog.png?token=GHSAT0AAAAAABSMD6CKPCTEPU5MIBTCJBL2YRR3MMA"> <br>
-3. Bei cache.log sollte das in etwa so aussehen:
-<img src="">
+3. Unter cache.log sollte das in etwa so aussehen:
+<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/cachelog.png?token=GHSAT0AAAAAABSMD6CLF2VJUWV2BI6ZGXFAYRR3YEQ">
