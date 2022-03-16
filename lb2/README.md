@@ -15,7 +15,7 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
 <h4>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</h4>
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/vagrantfile.png?token=GHSAT0AAAAAABSMD6CLU3WLYBKZ5NHW3W3OYRR2PTQ"/>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/vagrantfile.png"/>
 
 <h4>Erklärung des Codes</h4>
 <p>INFO: Alles hinter einem "#" ist ein Kommentar und wird somit nicht erklärt. 
@@ -120,23 +120,23 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <h2>Test</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/squidconf.png?token=GHSAT0AAAAAABSMD6CK77XCO6STVMJOLPAWYRR2U2Q">
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/squidconf.png?raw=true">
 <p>Wie man im Bild erkennen kann, ist diese Regel nur für den localhost definiert, mann könnte dies jedoch erweitern auf ein Netzwerk natürlich. Im blocklist-File habe ich die Seite .google.com drin. Um nun zu testen, ob das die Konfiguration funktioniert empfehle und verwende ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellen kann und nicht für den ganzen Host.</p>
 
 1. Firefox öffnen <br>
 2. "about:preferences" in die Suchleiste eingeben <br>
 3. Einstellungen suchen -> Proxy eingeben -> Einstellungen <br>
 4. Am Schluss sollte das so aussehen:
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/Proxysettings_Firefox.png?token=GHSAT0AAAAAABSMD6CKUCUYGXQEVAVRRJ7OYRR27CQ"><br>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/Proxysettings_Firefox.png?raw=true"><br>
 5. "OK" klicken <br>
 6. "www.google.com" in der Suchleiste suchen <br>
 7. Folgendes sollte kommen:
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/googleblocked.png?token=GHSAT0AAAAAABSMD6CKS4OG76PWLNZG4SZMYRR3L5A"><br>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/googleblocked.png?raw=true"><br>
 8. Nun können Sie jede beliebige Website probieren und wenn es richtig konfiguriert ist, sollte alles funktionieren. <br>
 <h3>Apache Webserver testen</h3>
 1. 127.0.0.1:8080 in die Suchleiste: <br>
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/manipage.png?token=GHSAT0AAAAAABSMD6CK3RZ7W5R2WWQZVGIGYRR3MFA"> <br>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/manipage.png?raw=true"> <br>
 2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll unter "access.log"  <b>TCP_DENIED_REPLY</b> für www.google.com:443 zu sehen sein:
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/accesslog.png?token=GHSAT0AAAAAABSMD6CKPCTEPU5MIBTCJBL2YRR3MMA"> <br>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/accesslog.png?raw=true"> <br>
 3. Unter cache.log sollte das in etwa so aussehen:
-<img src="https://raw.githubusercontent.com/mena03/M300-Services/main/lb2/images/cachelog.png?token=GHSAT0AAAAAABSMD6CLF2VJUWV2BI6ZGXFAYRR3YEQ">
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/cachelog.png?raw=true">
