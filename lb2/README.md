@@ -24,10 +24,6 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
     <th>Zeile</td>
     <th>Funktion</td>
   </tr>
-    <tr>
-    <td>12</td>
-    <td>Definiert den Namen der VM</td>
-  </tr>
   <tr>
     <td>15</td>
     <td>Definiert welche Vagrant Box installiert wird (in diesem Fall eine Ubuntu Maschine)</td>
