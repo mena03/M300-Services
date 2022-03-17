@@ -9,7 +9,7 @@ Vagrant.configure("2") do |config|
   # The most common configuration options are documented and commented below.
   # For a complete reference, please see the online documentation at
   # https://docs.vagrantup.com.
-
+  v.name = "LB2-Mena Squidproxy"
   # Every Vagrant development environment requires a box. You can search for
   # boxes at https://vagrantcloud.com/search.
   config.vm.box = "ubuntu/trusty64"
@@ -20,16 +20,16 @@ Vagrant.configure("2") do |config|
     sudo su -
     apt-get update
     apt-get -y upgrade
-    sudo apt-get -y install squid   #proxy
-    sudo apt-get -y install apache2 #webserver
-    sudo apt-get -y install wget    #um configs vom github zu installieren
+    sudo apt-get -y install squid
+    sudo apt-get -y install apache2
+    sudo apt-get -y install wget
     #squid config
     service squid.service start
     service squid.service restart
-    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/squid.conf #config file herunterladen
-    mv /etc/squid3/squid.conf /etc/squid3/squid.conf.backup #falls etwas schiefgehen würde hat man immer ein standardconfig
-    mv squid.conf /etc/squid3/      #heruntergeladenes config file verschieben in das richtige verzeichnis
-    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/blocklist #blockiere sites file herunterladen
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/squid.conf
+    mv /etc/squid3/squid.conf /etc/squid3/squid.conf.backup
+    mv squid.conf /etc/squid3/    
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/blocklist
     mv blocklist /etc/squid3/
     service squid3 restart
     #apache config
