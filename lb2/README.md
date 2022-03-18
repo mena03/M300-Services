@@ -1,4 +1,14 @@
 <h1>LB2 - Rubén Mena</h1>
+<h2>Inhaltsverzeichnis</h2>
+1. Wichtige Links <br>
+2. Meine Aufgabe bei der LB2 <br>
+  2.1 Infos zu de GIT Repos <br>
+3. Dokumentation <br>
+4. Vagrantfile <br>
+5. Erklärung des Codes <br>
+6. Sicherheit <br>
+7. Testen <br>
+
 <h2>Wichtige Links</h2>
 
 <a href="https://github.com/mena03/M300-Services">M300-Services GIT Repository</a><br>
@@ -14,7 +24,7 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
-<h4>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</h4>
+<p>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</p>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/vagrantfile.png"/>
 
 <h4>Erklärung des Codes</h4> 
@@ -116,7 +126,10 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
     <td>Erstellt eine Verknüpfung der Datei im ersten angegebenen Pfad im Ordner /var/www/html/logs/squid3/</td>
   </tr>
 </table>
-<h2>Test</h2>
+<h2>Sicherheit</h2>
+<p>Ich habe mit dem blocklist-File und der squid.conf Sicherheit für den Proxy User gewährleistet. Natürlich ist Google keine gefährliche Website, aber man könnte nun unzählige Websites in dieses blocklist-File zu schreiben, um unangebrachte, gefährliche oder sonstige Seiten zu blockieren.<br><br>
+Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren. </p>
+<h2>Testen</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/squidconf.png?raw=true">
