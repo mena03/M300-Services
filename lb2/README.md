@@ -186,3 +186,5 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/cachelog.png?raw=true">
 
 <h2>6. Quellenverzeichnis</h2>
+<a href="https://wiki.squid-cache.org/SquidFaq/ConfiguringSquid">Squid.conf Hilfe</a>
+<a href="https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html">Hilfe mit Apache Baisc Auth</a>
