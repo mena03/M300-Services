@@ -17,8 +17,7 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 <h4>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</h4>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/vagrantfile.png"/>
 
-<h4>Erklärung des Codes</h4>
-<p>INFO: Alles hinter einem "#" ist ein Kommentar und wird somit nicht erklärt. 
+<h4>Erklärung des Codes</h4> 
 <table>
   <tr>
     <th>Zeile</td>
