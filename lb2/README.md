@@ -128,7 +128,7 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 </table>
 <h2>Sicherheit</h2>
 <p>Ich habe mit dem blocklist-File und der squid.conf Sicherheit für den Proxy User gewährleistet. Natürlich ist Google keine gefährliche Website, aber man könnte nun unzählige Websites in dieses blocklist-File zu schreiben, um unangebrachte, gefährliche oder sonstige Seiten zu blockieren.<br><br>
-Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren. </p>
+Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren.</p>
 <h2>Testen</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
