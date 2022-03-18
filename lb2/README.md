@@ -178,6 +178,7 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 8. Nun können Sie jede beliebige Website probieren und wenn es richtig konfiguriert ist, sollte alles funktionieren. <br>
 <h3>Apache Webserver testen</h3>
 1. 127.0.0.1:8080 in die Suchleiste: <br>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/loginprompt.png?raw=true"/><p>melden Sie sich mit dem User "apache" und dem Passwort "apache" an.</p> 
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/manipage.png?raw=true"> <br>
 2. Wenn man nun vorher versucht hat auf www.google.com zu kommen, soll unter "access.log"  <b>TCP_DENIED_REPLY</b> für www.google.com:443 zu sehen sein:
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/accesslog.png?raw=true"> <br>
