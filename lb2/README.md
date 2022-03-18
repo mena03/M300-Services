@@ -102,7 +102,7 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
     <td>Startet den apache2 Dienst</td>
   </tr>
     <tr>
-    <td>37, 52</td>
+    <td>37, 52, 58</td>
     <td>Startet den apache2 Dienst neu</td>
   </tr>
     <tr>
@@ -128,6 +128,30 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
     <tr>
     <td>48, 50</td>
     <td>Erstellt eine Verknüpfung der Datei im ersten angegebenen Pfad im Ordner /var/www/html/logs/squid3/</td>
+  </tr>
+    <tr>
+    <td>54</td>
+    <td>Erstellt i File /etc/apache2/.htpasswd einen User namens apache mit Passwort apache</td>
+  </tr>
+    <tr>
+    <td>55</td>
+    <td>Ladet das Configfile für das Login Prompt herunter</td>
+  </tr>
+    <tr>
+    <td>56</td>
+    <td>Bennent das Standard Conf File für das Loginprompt um (mit .backup Endung)</td>
+  </tr>
+    <tr>
+    <td>57</td>
+    <td>In Zeile 55 heruntergeladene Datei in /etc/apache2/sites-available/ verschoben</td>
+  </tr>
+    <tr>
+    <td>59</td>
+    <td>beendet den Shell Progress (das Ende von den Bash Commands)</td>
+  </tr>
+    <tr>
+    <td>60</td>
+    <td>das Ende des Vagrantfiles</td>
   </tr>
 </table>
 <h2>Sicherheit</h2>
