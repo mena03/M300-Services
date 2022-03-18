@@ -155,10 +155,11 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
   </tr>
 </table>
 <h2>4. Sicherheit</h2>
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/googleblocked.png?raw=true"><
 <p>Ich habe mit dem blocklist-File und der squid.conf Sicherheit für den Proxy User gewährleistet. Natürlich ist Google keine gefährliche Website, aber man könnte nun unzählige Websites in dieses blocklist-File zu schreiben, um unangebrachte, gefährliche oder sonstige Seiten zu blockieren.<br><br>
 Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren.<br><br>
 Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht jeder die Logfiles vom Proxy lesen kann. 
-</p>
+</p> <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/loginprompt.png?raw=true"/>
 <h2>5. Testen</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
