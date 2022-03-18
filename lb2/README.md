@@ -20,7 +20,7 @@
 <a href="http://127.0.0.1:8080/logs/squid3/cache"></a>cache.log im Webserver<br>
 
 <h2>Einführung</h2>
-Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). <br>
+Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). Der Webserver wird mit einem Passwort geschützt, so dass nicht jeder einfach die Log-Files des Proxy lesen kann. <br>
 <h3>Infos zu den GIT Repos</h3>
 Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.md sind, ein seperates GIT Repository gemacht, dass öffentlich ist. Man findet es oben unter den "Wichtigen Links". Ich habe das so gemacht, dass 1. M300-Services sauber bleibt und 2. es nie Probleme hat im Vagrantfile mit meinen wget Zeilen. 
 
@@ -132,7 +132,9 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
 </table>
 <h2>Sicherheit</h2>
 <p>Ich habe mit dem blocklist-File und der squid.conf Sicherheit für den Proxy User gewährleistet. Natürlich ist Google keine gefährliche Website, aber man könnte nun unzählige Websites in dieses blocklist-File zu schreiben, um unangebrachte, gefährliche oder sonstige Seiten zu blockieren.<br><br>
-Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren.</p>
+Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren.<br><br>
+Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht jeder die Logfiles vom Proxy lesen kann. 
+</p>
 <h2>Testen</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>

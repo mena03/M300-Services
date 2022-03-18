@@ -21,7 +21,7 @@ Vagrant.configure("2") do |config|
     apt-get update
     apt-get -y upgrade
     sudo apt-get -y install squid
-    sudo apt-get -y install apache2
+    sudo apt-get -y install apache2 apache2-utils
     sudo apt-get -y install wget
     #squid config
     service squid.service start
@@ -49,6 +49,12 @@ Vagrant.configure("2") do |config|
     chmod 777 /var/www/html/logs/squid3/access
     ln -s /var/log/squid3/cache.log /var/www/html/logs/squid3/cache
     chmod 777 /var/www/html/logs/squid3/cache
+    service apache2 restart
+    #user auth for apache webserver
+    htpasswd -cdb /etc/apache2/.htpasswd apache apache
+    wget https://raw.githubusercontent.com/mena03/vagrant-webserver/main/squid-files/000-default.conf
+    mv /etc/apache2/sites-available/000-default.conf /etc/apache2/sites-available/000-default.conf.backup
+    mv 000-default.conf /etc/apache2/sites-available/
     service apache2 restart
   SHELL
 end
