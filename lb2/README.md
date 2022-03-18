@@ -4,14 +4,14 @@
 2. Einführung <br>
   2.1 Infos zu de GIT Repos <br>
   2.2 Grafische Übersicht der Services <br>
-4. Dokumentation <br>
-5. Vagrantfile <br>
-6. Erklärung des Codes <br>
-7. Sicherheit <br>
-8. Testen <br>
-9. Quellenverzeichnis <br>
+3. Dokumentation <br>
+3.1 Vagrantfile <br>
+3.2. Erklärung des Codes <br>
+4. Sicherheit <br>
+5. Testen <br>
+6. Quellenverzeichnis <br>
 
-<h2>Wichtige Links</h2>
+<h2>1. Wichtige Links</h2>
 
 <a href="https://github.com/mena03/M300-Services">M300-Services GIT Repository</a><br>
 <a href="https://github.com/mena03/vagrant-webserver">vagrant-webserver GIT Repository (für wget)</a><br>
@@ -19,19 +19,19 @@
 <a href="http://127.0.0.1:8080/logs/squid3/access"></a>access.log im Webserver<br>
 <a href="http://127.0.0.1:8080/logs/squid3/cache"></a>cache.log im Webserver<br>
 
-<h2>Einführung</h2>
+<h2>2. Einführung</h2>
 Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). Der Webserver wird mit einem Passwort geschützt, so dass nicht jeder einfach die Log-Files des Proxy lesen kann. <br>
-<h3>Infos zu den GIT Repos</h3>
+<h3>2.1 Infos zu den GIT Repos</h3>
 Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.md sind, ein seperates GIT Repository gemacht, dass öffentlich ist. Man findet es oben unter den "Wichtigen Links". Ich habe das so gemacht, dass 1. M300-Services sauber bleibt und 2. es nie Probleme hat im Vagrantfile mit meinen wget Zeilen. 
 
-<h3>Grafische Übersicht der Services</h3>
+<h3>2.2 Grafische Übersicht der Services</h3>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/service_graphic.png?raw=true"/>
-<h2>Dokumentation</h2>
-<h3>Vagrantfile</h3>
+<h2>3. Dokumentation</h2>
+<h3>3.1 Vagrantfile</h3>
 <p>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</p>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/vagrantfile.png"/>
 
-<h4>Erklärung des Codes</h4> 
+<h4>3.2 Erklärung des Codes</h4> 
 <table>
   <tr>
     <th>Zeile</td>
@@ -154,12 +154,12 @@ Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.m
     <td>das Ende des Vagrantfiles</td>
   </tr>
 </table>
-<h2>Sicherheit</h2>
+<h2>4. Sicherheit</h2>
 <p>Ich habe mit dem blocklist-File und der squid.conf Sicherheit für den Proxy User gewährleistet. Natürlich ist Google keine gefährliche Website, aber man könnte nun unzählige Websites in dieses blocklist-File zu schreiben, um unangebrachte, gefährliche oder sonstige Seiten zu blockieren.<br><br>
 Da man Proxys auch mit GPOs von einem Active Directory oder einer Firewall erzwingen kann für bestimmte User und Gruppen ist das sehr effektiv, nicht nur um das Netzwerk zu schützen, sondern auch um den Traffic zu analysieren.<br><br>
 Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht jeder die Logfiles vom Proxy lesen kann. 
 </p>
-<h2>Testen</h2>
+<h2>5. Testen</h2>
 <h3>Squid Proxy testen</h3>
 <h4>blockierte und erlaubte Websites</h4>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/squidconf.png?raw=true">
@@ -184,3 +184,5 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/accesslog.png?raw=true"> <br>
 3. Unter cache.log sollte das in etwa so aussehen:
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/cachelog.png?raw=true">
+
+<h2>Quellenverzeichnis</h2>
