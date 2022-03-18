@@ -3,11 +3,14 @@
 1. Wichtige Links <br>
 2. Meine Aufgabe bei der LB2 <br>
   2.1 Infos zu de GIT Repos <br>
-3. Dokumentation <br>
-4. Vagrantfile <br>
-5. Erklärung des Codes <br>
-6. Sicherheit <br>
-7. Testen <br>
+3. Einführung <br>
+  3.1 Grafische Übersicht der Services <br>
+4. Dokumentation <br>
+5. Vagrantfile <br>
+6. Erklärung des Codes <br>
+7. Sicherheit <br>
+8. Testen <br>
+9. Quellenverzeichnis <br>
 
 <h2>Wichtige Links</h2>
 
@@ -21,6 +24,9 @@
 Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). <br>
 <h3>Infos zu den GIT Repos</h3>
 Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.md sind, ein seperates GIT Repository gemacht, dass öffentlich ist. Man findet es oben unter den "Wichtigen Links". Ich habe das so gemacht, dass 1. M300-Services sauber bleibt und 2. es nie Probleme hat im Vagrantfile mit meinen wget Zeilen. 
+
+<h2>Einführung</h2>
+<h3>Grafische Übersicht der Services</h3>
 
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
