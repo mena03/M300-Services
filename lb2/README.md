@@ -1,10 +1,9 @@
 <h1>LB2 - Rubén Mena</h1>
 <h2>Inhaltsverzeichnis</h2>
 1. Wichtige Links <br>
-2. Meine Aufgabe bei der LB2 <br>
+2. Einführung <br>
   2.1 Infos zu de GIT Repos <br>
-3. Einführung <br>
-  3.1 Grafische Übersicht der Services <br>
+  2.2 Grafische Übersicht der Services <br>
 4. Dokumentation <br>
 5. Vagrantfile <br>
 6. Erklärung des Codes <br>
@@ -20,14 +19,13 @@
 <a href="http://127.0.0.1:8080/logs/squid3/access"></a>access.log im Webserver<br>
 <a href="http://127.0.0.1:8080/logs/squid3/cache"></a>cache.log im Webserver<br>
 
-<h2>Meine Aufgabe bei der LB2</h2>
+<h2>Einführung</h2>
 Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). <br>
 <h3>Infos zu den GIT Repos</h3>
 Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.md sind, ein seperates GIT Repository gemacht, dass öffentlich ist. Man findet es oben unter den "Wichtigen Links". Ich habe das so gemacht, dass 1. M300-Services sauber bleibt und 2. es nie Probleme hat im Vagrantfile mit meinen wget Zeilen. 
 
-<h2>Einführung</h2>
 <h3>Grafische Übersicht der Services</h3>
-
+<img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/service_graphic.png?raw=true"/>
 <h2>Dokumentation</h2>
 <h3>Vagrantfile</h3>
 <p>Das Vagrantfile ist für die automatisierte Konfiguration der VM zuständig. Hier ist das Vagrantfile noch zu sehen:</p>
