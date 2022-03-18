@@ -185,4 +185,4 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 3. Unter cache.log sollte das in etwa so aussehen:
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/cachelog.png?raw=true">
 
-<h2>Quellenverzeichnis</h2>
+<h2>6. Quellenverzeichnis</h2>
