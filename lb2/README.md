@@ -188,5 +188,5 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 
 <h2>6. Quellenverzeichnis</h2>
 <a href="https://wiki.squid-cache.org/SquidFaq/ConfiguringSquid">Squid.conf Hilfe</a><br>
-<a href="https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html">Hilfe mit Apache Baisc Auth</a><br>
+<a href="https://httpd.apache.org/docs/2.4/mod/mod_auth_basic.html">Hilfe mit Apache Basic Auth</a><br>
 <a href="https://www.youtube.com/watch?v=00bwCjPp-FU">Basic Auth Configuration</a>
