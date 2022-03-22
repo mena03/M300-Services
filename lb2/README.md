@@ -165,7 +165,7 @@ Der Apache HTTP-Server wird noch mit einem Passwort geschützt, so dass nicht je
 <h4>blockierte und erlaubte Websites</h4>
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/squidconf.png?raw=true">
 <img src="https://github.com/mena03/M300-Services/blob/main/lb2/images/blocklist.png?raw=true">
-<p>Wie man in den Bildern erkennen kann, ist diese Regel nur für den localhost definiert. Im blocklist-File habe ich die Seite .google.com drin. Mit "http_access allow !block" sage ich, dass alles durchgelassen werden soll bis auf die definierten Seiten im blockfile. Um nun zu testen, ob das die Konfiguration funktioniert empfehle und verwende ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellen kann und nicht für den ganzen Host.</p>
+<p>Wie man in den Bildern erkennen kann, ist diese Regel nur für den localhost definiert. Im blocklist-File habe ich die Seite .google.com drin. Mit "http_access allow !block" sage ich, dass alles durchgelassen werden soll, bis auf die definierten Seiten im blockfile. Um nun zu testen, ob die Konfiguration funktioniert empfehle und verwende ich <a href="https://www.mozilla.org/de/firefox/new/">Firefox</a> als Browser, weil man dort nur für den Browser selbst den Proxy einstellen kann und nicht für den ganzen Host.</p>
 
 1. Firefox öffnen <br>
 2. "about:preferences" in die Suchleiste eingeben <br>
