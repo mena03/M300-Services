@@ -20,7 +20,7 @@
 <a href="http://127.0.0.1:8080/logs/squid3/cache"></a>cache.log im Webserver<br>
 
 <h2>2. Einführung</h2>
-Ich habe mit Hilfe von Vagrant eine VM gemacht die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (z.B. www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). Der Webserver wird mit einem Passwort geschützt, so dass nicht jeder einfach die Log-Files des Proxy lesen kann. <br>
+Ich habe mit Hilfe von Vagrant eine VM gemacht, die automatisch einen Proxy (Squid) und Webserver (Apache) installiert und konfiguriert. Der Proxy soll jeden Internettraffic erlauben bis auf eine bestimmte Website (www.google.com). Der Apache-Webserver soll uns Zugriff auf Log-Files geben ohne sich auf die VM verbinden zu müssen (z.B. per SSH, FTP, etc.). Der Webserver wird mit einem Passwort geschützt, so dass nicht jeder einfach die Log-Files des Proxy lesen kann. <br>
 <h3>2.1 Infos zu den GIT Repos</h3>
 Ich habe für alle restlichen Files, die nicht das Vagrantfile oder das README.md sind, ein seperates GIT Repository gemacht, dass öffentlich ist. Man findet es oben unter den "Wichtigen Links". Ich habe das so gemacht, dass 1. M300-Services sauber bleibt und 2. es nie Probleme hat im Vagrantfile mit meinen wget Zeilen. 
 
