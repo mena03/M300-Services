@@ -1,0 +1,91 @@
+[root@master graphQL]# kubectl describe nodes |grep ID:
+  Machine ID:                 0064634ebd934e4eaa8a7a16ad010326
+  System UUID:                4fcac749-590f-5c4e-a100-b29dcb93f55c
+  Boot ID:                    91807465-9edf-49f0-a02b-638463817eb0
+  Machine ID:                 0064634ebd934e4eaa8a7a16ad010326
+  System UUID:                e6504a27-d635-9442-8376-598884e13ff6
+  Boot ID:                    d60f23a6-8f17-4f43-851e-cde91fa7d06b
+  Machine ID:                 0064634ebd934e4eaa8a7a16ad010326
+  System UUID:                8fe053ac-b34c-c34a-8ef8-73fa51126621
+  Boot ID:                    80a58e04-fab8-4e2c-926d-d7f6c4346978
+[root@master graphQL]# kubectl get node -o wide
+NAME      STATUS   ROLES           AGE    VERSION   INTERNAL-IP     EXTERNAL-IP   OS-IMAGE          KERNEL-VERSION          CONTAINER-RUNTIME
+master    Ready    control-plane   3d5h   v1.24.0   192.168.11.11   <none>        CentOS Stream 8   4.18.0-383.el8.x86_64   containerd://1.4.4
+worker1   Ready    <none>          3d5h   v1.24.0   192.168.11.12   <none>        CentOS Stream 8   4.18.0-383.el8.x86_64   containerd://1.4.4
+worker2   Ready    <none>          3d5h   v1.24.0   192.168.11.13   <none>        CentOS Stream 8   4.18.0-383.el8.x86_64   containerd://1.4.4
+[root@master graphQL]# kubectl get pod --all-namespaces
+NAMESPACE              NAME                                           READY   STATUS             RESTARTS        AGE
+default                hasura-785bf9b496-qg4kq                        0/1     CrashLoopBackOff   7 (2m24s ago)   13m
+default                hello-world-698598d84c-xznnz                   1/1     Running            3 (3h39m ago)   2d17h
+default                hello-world-pd                                 1/1     Running            3 (3h39m ago)   2d17h
+default                mysql-dcd64ddd4-7vl8f                          1/1     Running            3 (3h39m ago)   2d17h
+default                nginx-nfs-gold-deployment-bc6c665d4-txrmm      1/1     Running            3 (3h39m ago)   2d18h
+default                nginx-nfs-platin-deployment-667474f484-gscnc   1/1     Running            3 (3h39m ago)   2d18h
+default                nginx-nfs-silver-deployment-75cf9b5646-fbf6q   1/1     Running            3 (3h39m ago)   2d18h
+default                postgres-74cc98987b-qh5bn                      1/1     Running            0               13m
+jenkins                jenkins-7b586bdbcd-qkdmw                       1/1     Running            3 (3h39m ago)   2d17h
+kube-system            coredns-6d4b75cb6d-c4lzv                       1/1     Running            5 (3h39m ago)   3d5h
+kube-system            coredns-6d4b75cb6d-h6qqx                       1/1     Running            5 (3h39m ago)   3d5h
+kube-system            etcd-master                                    1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-apiserver-master                          1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-controller-manager-master                 1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-flannel-ds-6cmq9                          1/1     Running            6 (3h39m ago)   3d5h
+kube-system            kube-flannel-ds-fjlmc                          1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-flannel-ds-mxw8d                          1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-proxy-bs4nw                               1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-proxy-drx2c                               1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-proxy-pfds7                               1/1     Running            5 (3h39m ago)   3d5h
+kube-system            kube-scheduler-master                          1/1     Running            5 (3h39m ago)   3d5h
+kubernator             kubernator                                     1/1     Running            2 (3h39m ago)   7h13m
+kubernetes-dashboard   dashboard-metrics-scraper-77d78b7997-tfrfc     1/1     Running            5 (3h39m ago)   3d5h
+kubernetes-dashboard   kubernetes-dashboard-7b875db9dd-kbfll          1/1     Running            5 (3h39m ago)   3d5h
+metallb-system         controller-67969b5f7f-j6tvl                    0/1     CrashLoopBackOff   25 (2m5s ago)   105m
+metallb-system         controller-7476b58756-l2dgb                    1/1     Running            0               105m
+metallb-system         speaker-ddlrt                                  3/4     CrashLoopBackOff   25 (102s ago)   105m
+metallb-system         speaker-zf6k7                                  3/4     CrashLoopBackOff   25 (91s ago)    105m
+weave                  weave-scope-agent-q787n                        1/1     Running            2 (3h39m ago)   7h11m
+weave                  weave-scope-agent-sb5zv                        1/1     Running            2 (3h39m ago)   7h11m
+weave                  weave-scope-agent-sj2vb                        1/1     Running            2 (3h39m ago)   7h11m
+weave                  weave-scope-app-6996cfd49b-bpm9n               1/1     Running            2 (3h39m ago)   7h11m
+weave                  weave-scope-cluster-agent-7b566bddd7-nvjtn     1/1     Running            2 (3h39m ago)   7h11m
+[root@master graphQL]# kubectl get services -A
+NAMESPACE              NAME                        TYPE           CLUSTER-IP       EXTERNAL-IP     PORT(S)                  AGE
+default                hasura                      LoadBalancer   10.97.103.238    192.168.1.241   80:31198/TCP             22m
+default                kubernetes                  ClusterIP      10.96.0.1        <none>          443/TCP                  3d5h
+default                loadbalancer-service        LoadBalancer   10.96.114.7      192.168.1.240   8765:31089/TCP           112m
+default                mysql                       ClusterIP      None             <none>          3306/TCP                 2d17hdefault                mysql-service               NodePort       10.106.211.121   <none>          3306:31168/TCP           2d17hdefault                nginx-nfs-gold-service      ClusterIP      10.102.174.141   <none>          80/TCP                   2d18hdefault                nginx-nfs-platin-service    ClusterIP      10.101.205.133   <none>          80/TCP                   2d18hdefault                nginx-nfs-silver-service    ClusterIP      10.104.28.19     <none>          80/TCP                   2d18hdefault                postgres                    NodePort       10.101.110.230   <none>          5432:31467/TCP           16m
+jenkins                jenkins                     NodePort       10.98.241.38     <none>          8080:32323/TCP           2d17hkube-system            kube-dns                    ClusterIP      10.96.0.10       <none>          53/UDP,53/TCP,9153/TCP   3d5h
+kubernetes-dashboard   dashboard-metrics-scraper   ClusterIP      10.109.180.193   <none>          8000/TCP                 3d5h
+kubernetes-dashboard   dashboard-service           NodePort       10.99.151.35     <none>          8443:30727/TCP           3d5h
+kubernetes-dashboard   kubernetes-dashboard        ClusterIP      10.111.249.178   <none>          443/TCP                  3d5h
+weave                  weave-scope-app             ClusterIP      10.110.95.114    <none>          80/TCP                   7h11m[root@master graphQL]# kubectl get deployments.apps
+NAME                          READY   UP-TO-DATE   AVAILABLE   AGE
+hasura                        0/1     1            0           14m
+hello-world                   1/1     1            1           2d17h
+mysql                         1/1     1            1           2d17h
+nginx-nfs-gold-deployment     1/1     1            1           2d18h
+nginx-nfs-platin-deployment   1/1     1            1           2d18h
+nginx-nfs-silver-deployment   1/1     1            1           2d18h
+postgres                      1/1     1            1           14m
+[root@master graphQL]# kubectl get persistentvolume
+NAME            CAPACITY   ACCESS MODES   RECLAIM POLICY   STATUS   CLAIM                    STORAGECLASS   REASON   AGE
+pv-nfs-gold     5Gi        RWX            Recycle          Bound    default/pvc-nfs-gold     gold                    2d17h
+pv-nfs-mysql    2Gi        RWO            Retain           Bound    default/pvc-nfs-mysql    mysql                   2d17h
+pv-nfs-platin   1Gi        RWX            Recycle          Bound    default/pvc-nfs-platin   platin                  2d17h
+pv-nfs-silver   5Gi        RWX            Recycle          Bound    default/pvc-nfs-silver   silver                  2d17h
+[root@master graphQL]# /bin/local/token
+-bash: /bin/local/token: No such file or directory
+[root@master graphQL]# /usr/local/bin/token
+Name:         dashboard-admin-secret
+Namespace:    kube-system
+Labels:       <none>
+Annotations:  kubernetes.io/service-account.name: dashboard-admin
+              kubernetes.io/service-account.uid: 8743fdea-55c6-4b69-811c-40e3c47c861d
+
+Type:  kubernetes.io/service-account-token
+
+Data
+====
+ca.crt:     1099 bytes
+namespace:  11 bytes
+token:      eyJhbGciOiJSUzI1NiIsImtpZCI6Ik1PMTVtRVBRYXIzdDI3NlhpdE1NMDRZcE5fN0dNSkZTZ3dadi1HZ0dLYWMifQ.eyJpc3MiOiJrdWJlcm5ldGVzL3NlcnZpY2VhY2NvdW50Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9uYW1lc3BhY2UiOiJrdWJlLXN5c3RlbSIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VjcmV0Lm5hbWUiOiJkYXNoYm9hcmQtYWRtaW4tc2VjcmV0Iiwia3ViZXJuZXRlcy5pby9zZXJ2aWNlYWNjb3VudC9zZXJ2aWNlLWFjY291bnQubmFtZSI6ImRhc2hib2FyZC1hZG1pbiIsImt1YmVybmV0ZXMuaW8vc2VydmljZWFjY291bnQvc2VydmljZS1hY2NvdW50LnVpZCI6Ijg3NDNmZGVhLTU1YzYtNGI2OS04MTFjLTQwZTNjNDdjODYxZCIsInN1YiI6InN5c3RlbTpzZXJ2aWNlYWNjb3VudDprdWJlLXN5c3RlbTpkYXNoYm9hcmQtYWRtaW4ifQ.Di_JpmZ36U5BINcLg35sS4qVGOcjUE0XZfmam-0Ms-aPJRYPPmtWw0WPYBl5D2q9F-l9GloeIvfcAXmmzrKP6HNSmBL6tmWQExdBiQ10nxHnhBOGYxBkR6LyloN4grjGX1z0WewP8zWRH-wNeMjya6Z4YETnkakrDLTBAZUYRocfpCsJjP6DWXScdByHA7PCIFeE2WXqwIrZfp3vgsHiadvs2hBpMUsZhAuNJPThBxWMQoArOwaz93JgXO7UAF72G9oA2H9cXaO8i8FaZwxjoSKZxiG2LSHLPidO5FQBiJSo1BKgZv8lwMAChZm6yHt_U0rEFMMGETG9dSytHzCrLg
